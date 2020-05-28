@@ -24,13 +24,14 @@ const Test = ()=>{
          <Base>
          <div className="container-fluid">
              <div className="row text-center">
-                 <div className="col-12">
+                 <div className="col-12" >
                  <Carousel/>
                  </div>
              </div>
+             
          </div>
-         
-          
+        
+       
          </Base>
      
     )

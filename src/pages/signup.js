@@ -3,6 +3,9 @@ import Base from './base';
 import {Link} from 'react-router-dom';
 import Firebase from '../firebase';
 
+
+
+
 const Signup = () => {
   const [values, setValues] = useState({
     email: "",
@@ -35,7 +38,7 @@ const Signup = () => {
   const signUpForm = () => {
     return (
         
-      <div className="row container-fluid">
+      <div className="row container-fluid" >
         <div className="col-md-6 offset-sm-3 text-left">
           <form>
             <div className="form-group">

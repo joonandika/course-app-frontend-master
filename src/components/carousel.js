@@ -7,16 +7,20 @@ const   Carousel = ()=>{
            <li  data-slide-to="0" className="active"></li>
            <li  data-slide-to="1"></li>
            <li  data-slide-to="2"></li>
+           <li  data-slide-to="3"></li>
          </ol>
          <div className="carousel-inner" style={{maxHeight:"400px"}}>
              <div className="carousel-item active" >
-               <img  className="d-block  img-fluid" src="./images/c1.jpg" alt="First slide"/>
+               <img  className="d-block  img-fluid" src="./images/a1.jpg" alt="First slide"/>
              </div>
              <div className="carousel-item ">
-               <img className="d-block img-fluid" src="./images/c3.jpg" alt="second slide"/>
+               <img className="d-block img-fluid" src="./images/a2.jpg" alt="second slide"/>
              </div>
              <div className="carousel-item ">
-               <img className="d-block img-fluid" src="./images/c3.jpg" alt="third slide"/>
+               <img className="d-block img-fluid" src="./images/a4.jpg" alt="third slide"/>
+             </div>
+             <div className="carousel-item ">
+               <img className="d-block img-fluid" src="./images/a9.jpg" alt="third slide"/>
              </div>
              <a className="carousel-control-prev"  role="button" data-slide="prev">
              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
