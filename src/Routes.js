@@ -4,11 +4,12 @@ import Test from './components/test';
 import Signup from './pages/signup';
 import Signin from './pages/signin';
 
+
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap-grid.css';
 import 'antd/dist/antd.css';
-import Contact from './pages/contact';
+import ListingCard from './components/listingCard';
 
 
 
@@ -20,7 +21,7 @@ export default function Routes(){
                <Route path="/" exact component={Test}/>
                <Route path="/signup" exact component={Signup}/>
                <Route path="/signin" exact component={Signin}/>
-               <Route path="/contact" exact component={Contact}/>
+               <Route path="/test" exact component={ListingCard}/>
 
 
 

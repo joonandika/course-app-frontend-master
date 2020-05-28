@@ -7,10 +7,9 @@ const   Carousel = ()=>{
            <li  data-slide-to="0" className="active"></li>
            <li  data-slide-to="1"></li>
            <li  data-slide-to="2"></li>
-           <li  data-slide-to="3"></li>
          </ol>
          <div className="carousel-inner" style={{maxHeight:"400px"}}>
-             <div className="carousel-item active" >
+         <div className="carousel-item active" >
                <img  className="d-block  img-fluid" src="./images/a1.jpg" alt="First slide"/>
              </div>
              <div className="carousel-item ">

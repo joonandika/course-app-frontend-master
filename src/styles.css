@@ -5,20 +5,25 @@
 }
 
 body {
-  background: #fff;
+  background: #343a40;
 }
-footer {
-  position: relative;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  top: 95%;
+footer{
+  position: absolute;
+ 
+ 
 }
-/* d */
-/* .navbar-collapse {
-  
-  top: 57px;
-  background: #f8f9fa;
-  z-index: 9999;
-  
-} */
+.site-card-wrapper {
+  background:grey;
+  padding: 30px;
+}
+#courseCard{
+  font-size: 25px;
+  background-color: black;
+  color: aliceblue;
+  border-color: floralwhite;
+  border: solid white;
+}
+#courseCard:hover{
+  background-color: #2FDED4;
+  color: black;
+}

@@ -88,7 +88,7 @@ const handleChange = name => event => {
   const loadingMessage = () => {
       return (
           loading && (
-            <div className="row">
+            <div className="row" >
             <div className="col-md-6 offset-sm-3 text-left">
               <div
                 className="alert alert-info"
@@ -124,9 +124,9 @@ const handleChange = name => event => {
                        <button onClick={onsubmitforGoogle} className="btn btn-success btn-block">
                            Signin with Google
                        </button>
-                       {/* <button onClick={onsubmitforGoogle} className="btn btn-success btn-block">
+                       <button onClick={onsubmitforGoogle} className="btn btn-success btn-block">
                            Signin with Facebook
-                       </button> */}
+                       </button>
                     </form>
                 </div>
             </div>

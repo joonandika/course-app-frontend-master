@@ -9,5 +9,5 @@ import $ from 'jquery';
 import Popper from 'popper.js';
 import 'antd/dist/antd.css';
 import './styles/antCarousel.css';
-import './styles.css'
+
 ReactDom.render(<Routes/>,document.getElementById("root"));

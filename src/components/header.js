@@ -1,4 +1,3 @@
-
 import React,{useState,useEffect} from 'react';
 import {Link,Redirect} from 'react-router-dom';
 
@@ -23,8 +22,10 @@ const Header =()=>{
 
  
     return (
-   
-     <nav className="navbar navbar-expand-lg navbar-light bg-light">
+   <div className="col-12 p-0">
+
+  
+     <nav className="navbar navbar-expand-lg navbar-light " style={{backgroundColor:'#2FDED4'}}>
        <a className="navbar-brand font-weight-bold text-dark" >FTV Salon Academy</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,15 +34,15 @@ const Header =()=>{
      <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
        
-        <li className="nav-item active" key ="1" >
+        <li className="nav-item active" key ="1">
          <Link to="/" className="nav-link" >Home <span className="sr-only">(current)</span></Link>
          </li>
        
         <li className="nav-item dropdown" key ="2">
-          <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" 
+          <p className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" 
           aria-haspopup="true" aria-expanded="false">
-          Categories
-         </a>
+          Courses
+         </p>
          <div className="dropdown-menu" aria-labelledby="navbarDropdown">
            {
                   
@@ -83,8 +84,7 @@ const Header =()=>{
       </ul>
      </div>
     </nav>
-
-   
+    </div>
         
     )
 

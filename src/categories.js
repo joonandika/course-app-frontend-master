@@ -1,0 +1,1 @@
+export const categories = ["Hair","Make up","Spa","Art","course4","course5"];
