@@ -5,12 +5,20 @@
 }
 
 body {
-  background: #343a40;
+  background: #fff;
 }
-footer{
+footer {
   position: relative;
   bottom: 0px;
-  right:0px;
-  left:0px;
+  right: 0px;
+  left: 0px;
   top: 95%;
 }
+/* d */
+/* .navbar-collapse {
+  
+  top: 57px;
+  background: #f8f9fa;
+  z-index: 9999;
+  
+} */

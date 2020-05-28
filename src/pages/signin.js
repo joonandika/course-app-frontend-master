@@ -124,9 +124,9 @@ const handleChange = name => event => {
                        <button onClick={onsubmitforGoogle} className="btn btn-success btn-block">
                            Signin with Google
                        </button>
-                       <button onClick={onsubmitforGoogle} className="btn btn-success btn-block">
+                       {/* <button onClick={onsubmitforGoogle} className="btn btn-success btn-block">
                            Signin with Facebook
-                       </button>
+                       </button> */}
                     </form>
                 </div>
             </div>
