@@ -14,11 +14,7 @@ const Base =(props)=>{
                 </div>
             </div>
           {props.children}
-          <div className="row container">
-                <div className="col-12 p-0">
-                  <ListingCard/>
-                </div>
-            </div>
+          
          
         </div>
         

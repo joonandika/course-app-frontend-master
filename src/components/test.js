@@ -7,6 +7,7 @@ import  Carousel from './carousel';
 import AntCarousel from './antcarousel';
 import { Layout } from 'antd';
 import CategoryCards from './CategoryCards';
+import ListingCard from './listingCard';
 
 
 const {  Content } = Layout;
@@ -42,6 +43,11 @@ const Test = ()=>{
              <div className="row text-center" >
                  <CategoryCards/>
              </div>
+             <div className="row container-fluid">
+                <div className="col-12">
+                  <ListingCard/>
+                </div>
+            </div>
          </div>
          </Base>
      
