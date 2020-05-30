@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap-grid.css';
 import 'antd/dist/antd.css';
 import ListingCard from './components/listingCard';
+import Addlist from './pages/Addlisting';
 
 
 
@@ -22,6 +23,8 @@ export default function Routes(){
                <Route path="/signup" exact component={Signup}/>
                <Route path="/signin" exact component={Signin}/>
                <Route path="/test" exact component={ListingCard}/>
+               <Route path="/add" exact component={Addlist}/>
+
 
 
 
