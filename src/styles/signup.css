@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+
+label{
+    font-size: 24px;
+    color: aliceblue;
+    font-weight: lighter;
+  
+}
+
+h1{
+    font-weight: lighter;
+    font-family: 'Lobster', cursive;
+}
+
+.signinback {
+    left: 0ch;
+    right: 0ch;
+    height: 100%;
+    width: 100%;
+    top: 0em;
+    position: absolute;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center;
+     z-index: -1;
+     background: linear-gradient(309deg, #2fded4, #1daca4, #b44bdb, #8768e6);
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 16s ease infinite;
+    -moz-animation: AnimationName 16s ease infinite;
+    animation: AnimationName 16s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 83%}
+    50%{background-position:100% 18%}
+    100%{background-position:0% 83%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 83%}
+    50%{background-position:100% 18%}
+    100%{background-position:0% 83%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 83%}
+    50%{background-position:100% 18%}
+    100%{background-position:0% 83%}
+}

@@ -2,6 +2,9 @@ import React,{useState,useEffect} from 'react';
 import Base from './base';
 import {Link} from 'react-router-dom';
 import Firebase from '../firebase';
+import styled from 'styled-components';
+
+import '../styles/signup.css';
 
 const Signup = () => {
   const [values, setValues] = useState({
@@ -34,12 +37,12 @@ const Signup = () => {
 
   const signUpForm = () => {
     return (
-        
+      
       <div className="row container-fluid">
         <div className="col-md-6 offset-sm-3 text-left">
           <form>
             <div className="form-group">
-              <label className="text-dark">Email</label>
+              <label className="">Email</label>
               <input
                 className="form-control"
                 onChange={handleChange("email")}
@@ -49,7 +52,7 @@ const Signup = () => {
             </div>
 
             <div className="form-group">
-              <label className="text-dark">Password</label>
+              <label className="">Password</label>
               <input
                 onChange={handleChange("password")}
                 className="form-control"
@@ -63,6 +66,7 @@ const Signup = () => {
           </form>
         </div>
       </div>
+     
     );
   };
 
@@ -99,12 +103,16 @@ const Signup = () => {
 
   return (
     <Base >
-       <h3 className="text-center">
+       <h1 className="text-center text-white" style={{fontWeight:'lighter'}}>
          Signup
-       </h3>
-      {successMessage()}
+       </h1>
+       <div className="signinback"> </div>
+       <div className="signupcard">
+       {successMessage()}
       {errorMessage()}
       {signUpForm()}
+       </div>
+    
      
     </Base>
   );

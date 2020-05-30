@@ -25,7 +25,7 @@ const Header =()=>{
    <div className="col-12 p-0">
 
   
-     <nav className="navbar navbar-expand-lg navbar-light " style={{backgroundColor:'#2FDED4'}}>
+     <nav className="navbar navbar-expand-lg navbar-light " style={{backgroundColor:'rgba(112,208,229,0.5)'}}>
        <a className="navbar-brand font-weight-bold text-dark" >FTV Salon Academy</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

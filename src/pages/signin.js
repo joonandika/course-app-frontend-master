@@ -3,6 +3,8 @@ import Base from './base';
 import {Link,Redirect} from 'react-router-dom';
 import Firebase from "../firebase";
 import * as firebase from'firebase';
+import '../styles/signup.css';
+
 const Signin = ()=>{
     const [values,setValues] = useState({
         email:"",
@@ -110,23 +112,21 @@ const handleChange = name => event => {
                     <form >
                        
                        <div className="form-group">
-                           <label  className="text-dark">Email</label>
+                           <label  className="">Email</label>
                             <input onChange={handleChange("email")} className="form-control" value={email} type="email"/>
                        </div>
                        <div className="form-group">
-                           <label  className="text-dark">password</label>
+                           <label  className="">Password</label>
                             <input onChange={handleChange("password")} className="form-control" value={password} type="password"/>
                        </div>
-                       <button onClick={onsubmit} className="btn btn-success btn-block">
+                       <button onClick={onsubmit} className="btn btn-primary btn-block">
                            Submit
                        </button>
                        <div className="col-xs-12"><hr/></div>
-                       <button onClick={onsubmitforGoogle} className="btn btn-success btn-block">
+                       <button onClick={onsubmitforGoogle} className="btn btn-primary btn-block">
                            Signin with Google
                        </button>
-                       <button onClick={onsubmitforGoogle} className="btn btn-success btn-block">
-                           Signin with Facebook
-                       </button>
+                       
                     </form>
                 </div>
             </div>
@@ -135,15 +135,17 @@ const handleChange = name => event => {
 
     return (
         <Base >
-            <h3 className="text-center">
+        <div className="signinback"> </div>
+        <h1 className="text-center text-white" style={{fontWeight:'lighter'}}>
               Signin
-            </h3>
+            </h1>
+            <div className="signupcard">
             {loadingMessage()}
             {errorMessage()}
             {singInFrom()}
             {performRedirect()}
-            
-            
+            </div>
+       
         </Base>
     );
 }
