@@ -15,6 +15,12 @@ h1{
     font-family: 'Lobster', cursive;
 }
 
+canvas{
+    position:absolute;
+    top:0;
+    z-index: -1;
+}
+
 .signinback {
     left: 0ch;
     right: 0ch;

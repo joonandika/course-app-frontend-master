@@ -1,22 +1,27 @@
 import React,{useState} from 'react';
 import Firebase from '../firebase';
 import Base from './base';
-
+import firebase from 'firebase';
 const Addlist = ()=>{
  const [data,setData] = useState({
      title:"",
      Address:"",
      imgUrl:"",
      url:"",
-     courses:[],
+     courses:[""],
      description:"",
      location:""
  });
  const [s,setS] = useState(false);
+ const [stringCourse,setCourse] = useState("");
+
  const {courses,title} = data;
  const submit = ()=>{
-     const arr = courses.split(" ");
-     setData({...data,courses:arr});
+     const arr = stringCourse.split(",");
+     arr.forEach(a => setData({...data,courses:courses.push(a)}));
+     console.log(arr);
+     
+     console.log(data);
      Firebase.firestore().collection("All").doc(title).set(data)
      .then((s)=>setS(true))
      .catch(err=>setS(false));
@@ -25,7 +30,7 @@ const Addlist = ()=>{
         Address:"",
         imgUrl:"",
         url:"",
-        courses:[],
+        courses:[""],
         description:"",
         location:""
      });
@@ -37,8 +42,8 @@ const Addlist = ()=>{
 
  }
  const handlechange= name=>event=>{
-    setData({...data,[name]:event.target.value});
-      
+   if(name!="courses") setData({...data,[name]:event.target.value});
+   else setCourse(event.target.value);   
 }    
  return (
      <>

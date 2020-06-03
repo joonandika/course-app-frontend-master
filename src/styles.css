@@ -22,8 +22,11 @@ footer{
   color: aliceblue;
   border-color: floralwhite;
   border: solid white;
+  max-width:17rem;
+  width: 17rem;
 }
 #courseCard:hover{
   background-color: #2FDED4;
   color: black;
+  
 }

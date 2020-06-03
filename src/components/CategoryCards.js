@@ -19,7 +19,7 @@ const CategoryCards = ()=>{
                     
                                 return  <div className="col-lg-2 col-md-2 col-sm-4 col-xs-4" onClick={courseResult}>
                                     <Link to={val}> 
-                                     <div className="card" id="courseCard" >
+                                     <div className="" id="courseCard" >
                                      {val}
                                      </div>
                                   </Link>

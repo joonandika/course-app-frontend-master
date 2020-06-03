@@ -3,8 +3,9 @@ import Base from './base';
 import {Link} from 'react-router-dom';
 import Firebase from '../firebase';
 import styled from 'styled-components';
-
 import '../styles/signup.css';
+import ParticleBack from '../components/particles';
+
 
 const Signup = () => {
   const [values, setValues] = useState({
@@ -38,7 +39,7 @@ const Signup = () => {
   const signUpForm = () => {
     return (
       
-      <div className="row container-fluid">
+      <div className="row container-fluid p-0">
         <div className="col-md-6 offset-sm-3 text-left">
           <form>
             <div className="form-group">
@@ -102,7 +103,9 @@ const Signup = () => {
   };
 
   return (
+    <>
     <Base >
+    
        <h1 className="text-center text-white" style={{fontWeight:'lighter'}}>
          Signup
        </h1>
@@ -112,9 +115,9 @@ const Signup = () => {
       {errorMessage()}
       {signUpForm()}
        </div>
-    
-     
     </Base>
+    <ParticleBack/>
+    </>
   );
 };
 
