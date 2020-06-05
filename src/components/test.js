@@ -6,6 +6,7 @@ import { Layout } from 'antd';
 import CategoryCards from './CategoryCards';
 import ListingCard from './listingCard';
 import { categories } from '../categories';
+import Model from './detailsModel';
 
 const Test = ()=>{
     const [data, setData] = useState([""]);
