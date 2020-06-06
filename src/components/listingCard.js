@@ -1,6 +1,6 @@
 import React ,{useState,useEffect}from 'react';
 import { ListingFetch,selectListFetch } from '../firebaseHelpers/listing.js';
-import Skeleton from 'react-loading-skeleton';
+import Skeleton,{SkeletonTheme} from 'react-loading-skeleton';
 import '../styles/listingCard.css'
 import Modal from './detailsModel.js';
 
@@ -44,15 +44,52 @@ const ListingCard = (props)=>{
 
     const displayDesc = (s)=>{
        var sarr = s.split(" ");
-       if(sarr.length >25){
+       if(sarr.length >15){
            s = s.substring(0,55);
             s+="....";
            return s;
        }else return s;
     }
+    const showSkeleton = ()=>{
+      return(
+       <div className="myskeleton" style={{padding:"30px"}}>
+         <SkeletonTheme color="#9E9E9E" highlightColor="#DBD9DC">
+             <section>
+                <Skeleton height={170} width={250} />
+              </section>
+              <section>
+                  <Skeleton count={4} />
+              </section>
+             </SkeletonTheme>
+       </div>
+      )
+           
+       
+    };
     
     return (
-        <>
+        <>  
+        {
+            loading && (
+              showSkeleton()
+            )
+        }
+         {
+            loading && (
+              showSkeleton()
+            )
+        }
+         {
+            loading && (
+              showSkeleton()
+            )
+        }
+         {
+            loading && (
+              showSkeleton()
+            )
+        }
+                    
            {
                modal && (
                 <Modal
@@ -67,7 +104,7 @@ const ListingCard = (props)=>{
                 email={email}
                 show={modal}
                 close={()=>setModal(false)}>
-                    Maybe aircrafts fly very high because they don't want to be seen in plane sight?
+                   
                 </Modal>
                )
            }
@@ -79,7 +116,7 @@ const ListingCard = (props)=>{
                     
                     <div className="column py-md-3">   
                     
-                        <div className="card text-center" id="listingCard" style={{width:"18rem",minWidth:"18rem",heigth:"24rem"}}>
+                        <div className="card text-center" id="listingCard" style={{width:"18rem",minWidth:"13rem",heigth:"24rem"}}>
                             <div className="imgcover" style={{width:"100%",objectFit:"cover",height:"13vw",justifyContent:"center"}}>
                             <img src={val.imgUrl} className="card-img-top   embed-responsive-item" style={{maxHeight:"13vw",minHeight:"11vw"}} />
                             </div>
@@ -87,7 +124,7 @@ const ListingCard = (props)=>{
                         <div className="card-body" style={{padding:"2px 16px"}}>
                           <h5 className="cardtitle">{val.title}</h5>
                           <p className="card-text">
-                              {displayDesc(val.description)}
+                            
                           </p>
                          
                         </div>

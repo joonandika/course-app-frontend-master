@@ -30,7 +30,14 @@
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
-    height: 25rem;
+    height: 22rem;
+    max-height:21rem ;
+  }
+
+  @media (min-width: 376px) {
+    .card-img-top {
+        height: 14vw;
+    }
   }
 
   @media (min-width: 576px) {

@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react';
 import {Link,Redirect} from 'react-router-dom';
 
 import Firebase from '../firebase';
+import { categories } from '../categories';
 const Header =()=>{
   const [islogged,setLogged] = useState(false);
   useEffect(()=>{
@@ -48,7 +49,7 @@ const Header =()=>{
          <div className="dropdown-menu" aria-labelledby="navbarDropdown">
            {
                   
-           ["Hair","Makeup","Spa"].map((val,ind)=><a key = {ind} className="dropdown-item" >{val}</a>)
+           categories.map((val,ind)=><a key = {ind} className="dropdown-item" >{val}</a>)
 
            }
           

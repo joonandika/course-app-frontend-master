@@ -10,7 +10,7 @@ export const ListingFetch = async(collection)=>{
 export const selectListFetch = async (selectCourse)=>{
         var db = Firebase.firestore();
        const snap = await db.collection("All")
-        .where("courses",'array-contains',selectCourse)
+        .where("courses",'array-contains-any',[selectCourse,selectCourse.toLowerCase()])
         .get();
         return snap.docs.map(doc => doc.data());
 };

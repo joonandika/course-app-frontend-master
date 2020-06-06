@@ -89,6 +89,33 @@ const Test = ()=>{
                       )
                       
                   }
+                  {
+                      selectCourse ==="Nail" && (
+                          <ListingCard name="Nail"/>
+                      )
+                      
+                  }
+                   {
+                      selectCourse ==="Mehandi" && (
+                          <ListingCard name="Mehandi"/>
+                      )
+                      
+                  }
+                  {
+                      selectCourse ==="Skin" && (
+                          <ListingCard name="Skin"/>
+                      )
+                      
+                  }
+                  {
+                      selectCourse ==="Cosmetology" && (
+                          <ListingCard name="Cosmetology"/>
+                      )
+                      
+                  }
+                  
+                  
+                 
                 
             </div>
          </div>

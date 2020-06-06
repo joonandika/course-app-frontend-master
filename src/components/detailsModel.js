@@ -1,6 +1,9 @@
 import React from 'react';
 
 import '../styles/model.css';
+import '../styles/signup.css';
+
+import ParticleBack from './particles';
 
 const Modal = (props) => {
     return (
@@ -9,7 +12,7 @@ const Modal = (props) => {
                 style={{
                     transform: props.show ? 'translateY(0vh)' : 'translateY(-100vh)',
                     opacity: props.show ? '1' : '0',
-                  top:window.pageYOffset
+                  top:window.pageYOffset 
                 }}>
                 <div className="modal-header">
                 <h3 className="modalHead">{props.title}</h3>
@@ -33,7 +36,7 @@ const Modal = (props) => {
                         Address -{props.address}
                     </p>
                     <p>
-                        courses - {props.courses}
+                        courses - {props.courses.substring(2,props.courses.length)}
                     </p>
                     <button className="btn btn-danger" onClick={props.close}>Close</button>
                 <a className="btn btn-info" href={props.url} target="_blank">Visit Website</a>
@@ -43,6 +46,7 @@ const Modal = (props) => {
                     
                 </div>
             </div>
+            <ParticleBack/>
         </div>
     )
 }
