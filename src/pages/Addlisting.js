@@ -47,7 +47,7 @@ const Addlist = ()=>{
 
  }
  const handlechange= name=>event=>{
-   if(name!="courses") setData({...data,[name]:event.target.value});
+   if(name!=="courses") setData({...data,[name]:event.target.value});
    else setCourse(event.target.value);   
 }    
  return (
