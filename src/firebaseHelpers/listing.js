@@ -14,3 +14,10 @@ export const selectListFetch = async (selectCourse)=>{
         .get();
         return snap.docs.map(doc => doc.data());
 };
+export const CityListFetch = async (selectCity)=>{
+        var db = Firebase.firestore();
+       const snap = await db.collection("All")
+        .where("location",'==',selectCity.toLowerCase())
+        .get();
+        return snap.docs.map(doc => doc.data());
+};

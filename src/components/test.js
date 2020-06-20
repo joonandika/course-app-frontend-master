@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import Firebase from '../firebase';
 import Base from '../pages/base';
-import  Carousel from './carousel';
+import  CarouselCard from './carousel';
 import { Layout } from 'antd';
 import CategoryCards from './CategoryCards';
 import ListingCard from './listingCard';
@@ -9,20 +9,12 @@ import { categories } from '../categories';
 import Model from './detailsModel';
 
 const Test = ()=>{
-    const [data, setData] = useState([""]);
+    const [city, setCity] = useState("none");
     const [selectCourse,setCourse] = useState("All");
-    const [loading ,setLoad] = useState(true);
+   
     
     useEffect(()=>{
-         var db = Firebase.firestore();
-         db.collection("hair")
-         .where("courses",'array-contains',selectCourse)
-         .get().then((querySnapshot) => {
-                  querySnapshot.forEach((data)=>{
-                      console.log(data.data());
-                  })
-            });
-
+        
      },[]);
 
     return (
@@ -31,7 +23,14 @@ const Test = ()=>{
          <div className="container-fluid p-0 ">
              <div className="row text-center">
                  <div className="col-12 p-0">
-                 <Carousel/>
+                     <div className="title" style={{zIndex:12,position:"absolute",top:"12vw",fontSize:"900px",left:"19vw",color:"white"}}>
+                         <h1 style={{color:"white",background:"rgb(71,198,183)",
+                         background:" linear-gradient(158deg, rgba(71,198,183,1) 0%, rgba(20,214,157,0.8435749299719888) 38%, rgba(0,212,255,1) 99%)",
+                         fontSize:"5vw",
+                         boxShadow:" 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+                         }}>Find Colleges of Your choice</h1>
+                     </div>
+                 <CarouselCard/>
                  
                  </div>
                  
@@ -56,6 +55,7 @@ const Test = ()=>{
                        })
                    }
                </div>
+              
              </div>
              <div className="row container-fluid">
                 
@@ -113,6 +113,10 @@ const Test = ()=>{
                       )
                       
                   }
+         
+                  
+                 
+                  
                   
                   
                  

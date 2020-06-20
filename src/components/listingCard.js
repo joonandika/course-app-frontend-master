@@ -1,5 +1,5 @@
 import React ,{useState,useEffect}from 'react';
-import { ListingFetch,selectListFetch } from '../firebaseHelpers/listing.js';
+import { ListingFetch,selectListFetch,CityListFetch } from '../firebaseHelpers/listing.js';
 import Skeleton,{SkeletonTheme} from 'react-loading-skeleton';
 import '../styles/listingCard.css'
 import Modal from './detailsModel.js';
@@ -23,6 +23,7 @@ const ListingCard = (props)=>{
 
     useEffect(()=>{
         if(props.name !="All"){
+            console.log(1);
             selectListFetch(props.name)
             .then(data=>{
                 setInfo(data);
@@ -92,7 +93,8 @@ const ListingCard = (props)=>{
                     
            {
                modal && (
-                <Modal
+                   <div >
+                       <Modal
                 title = {title}
                 details={description}
                 image= {image}
@@ -106,6 +108,8 @@ const ListingCard = (props)=>{
                 close={()=>setModal(false)}>
                    
                 </Modal>
+                   </div>
+               
                )
            }
         
@@ -114,7 +118,7 @@ const ListingCard = (props)=>{
                 info.map((val,ind)=>{
                 return (
                     
-                    <div className="column py-md-3">   
+                    <div key ={ind}className="column py-md-3">   
                     
                         <div className="card text-center" id="listingCard" style={{width:"18rem",minWidth:"13rem",heigth:"24rem"}}>
                             <div className="imgcover" style={{width:"100%",objectFit:"cover",height:"13vw",justifyContent:"center"}}>

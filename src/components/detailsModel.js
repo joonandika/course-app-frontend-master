@@ -7,12 +7,16 @@ import ParticleBack from './particles';
 
 const Modal = (props) => {
     return (
-        <div>
+        <div style={{position:"absolute",height:"150%",top:window.pageYOffset,bottom:0,left:0,right:0,width:"100%",zIndex:2,backgroundColor:"rgba(66,66,66,0.6)"}}>
             <div className="modal-wrapper"
                 style={{
                     transform: props.show ? 'translateY(0vh)' : 'translateY(-100vh)',
                     opacity: props.show ? '1' : '0',
-                  top:window.pageYOffset 
+                  
+                  zIndex:3,
+                  position:"absolute",
+                  top:0
+                 
                 }}>
                 <div className="modal-header">
                 <h3 className="modalHead">{props.title}</h3>

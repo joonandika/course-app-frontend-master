@@ -4,9 +4,7 @@
   border-radius: 0px;
 }
 
-body {
-  background: #343a40;
-}
+
 footer{
   position: absolute;
  
@@ -27,6 +25,7 @@ footer{
 }
 #courseCard:hover{
   background-color: #2FDED4;
+  transition: 0.5s ;
   color: black;
   
 }

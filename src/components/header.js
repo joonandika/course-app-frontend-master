@@ -41,21 +41,7 @@ const Header =()=>{
          <Link to="/" className="nav-link" >Home <span className="sr-only">(current)</span></Link>
          </li>
        
-        <li className="nav-item dropdown" key ="2">
-          <p className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" 
-          aria-haspopup="true" aria-expanded="false">
-          Courses
-         </p>
-         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-           {
-                  
-           categories.map((val,ind)=><a key = {ind} className="dropdown-item" >{val}</a>)
-
-           }
-          
         
-          </div>
-        </li>
          {
            !islogged && (
              <>
