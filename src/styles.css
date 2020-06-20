@@ -5,11 +5,10 @@
 }
 
 
-footer{
-  position: absolute;
- 
- 
+body {
+ background-color:aliceblue; 
 }
+
 .site-card-wrapper {
   background:grey;
   padding: 30px;
